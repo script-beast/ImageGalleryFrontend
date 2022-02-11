@@ -10,7 +10,7 @@ export default function ShowImg() {
     const [Imgs, setImgs] = React.useState([])
 
     async function fthallimg() {
-        const resImgs = await fetch('http://localhost:4001/show/' + id)
+        const resImgs = await fetch('https://mygalleryapi.herokuapp.com/show/' + id)
         const dataImgs = await resImgs.json()
         setImgs(dataImgs)
     }
@@ -20,7 +20,7 @@ export default function ShowImg() {
             const requestOptions = {
                 method: 'DELETE',
             }
-            const resImgs = await fetch('http://localhost:4001/delete/' + id, requestOptions)
+            const resImgs = await fetch('https://mygalleryapi.herokuapp.com/delete/' + id, requestOptions)
             const dataImgs = await resImgs.json()
             console.log(dataImgs)
             if (dataImgs) {

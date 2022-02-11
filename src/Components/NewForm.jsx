@@ -27,7 +27,7 @@ export default function NewForm() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(Imgs)
             }
-            const response = await fetch('http://localhost:4001/', requestOptions);
+            const response = await fetch('https://mygalleryapi.herokuapp.com/', requestOptions);
             const data = await response.json();
             console.log(data)
             if (data) {

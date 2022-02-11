@@ -19,7 +19,7 @@ export default function EditForm() {
     }
 
     async function fthallimg() {
-        const resImgs = await fetch('http://localhost:4001/update/' + id)
+        const resImgs = await fetch('https://mygalleryapi.herokuapp.com/update/' + id)
         const dataImgs = await resImgs.json()
         setImg(dataImgs)
     }
@@ -32,7 +32,7 @@ export default function EditForm() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(Img)
             }
-            const response = await fetch('http://localhost:4001/edit/' + id, requestOptions);
+            const response = await fetch('https://mygalleryapi.herokuapp.com/edit/' + id, requestOptions);
             const data = await response.json();
             if (data) {
                 navigate('/')

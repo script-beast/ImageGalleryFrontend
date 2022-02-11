@@ -21,7 +21,7 @@ export default function HomePage() {
         searchData()
     }
     async function fthallimg() {
-        const resImgs = await fetch('http://localhost:4001/')
+        const resImgs = await fetch('https://mygalleryapi.herokuapp.com/')
         const dataImgs = await resImgs.json()
         setImgs(dataImgs)
         setSearchResult(dataImgs)
