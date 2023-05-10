@@ -5,6 +5,8 @@ import Fuse from 'fuse.js'
 import ReactPaginate from 'react-pagination-library';
 import "react-pagination-library/build/css/index.css";
 
+import BaseURL from '../Api/BaseURL';
+
 export default function HomePage() {
 
     const [Imgs, setImgs] = React.useState([])
@@ -21,7 +23,7 @@ export default function HomePage() {
         searchData()
     }
     async function fthallimg() {
-        const resImgs = await fetch('https://mygalleryapi.herokuapp.com/')
+        const resImgs = await fetch(BaseURL)
         const dataImgs = await resImgs.json()
         setImgs(dataImgs)
         setSearchResult(dataImgs)
