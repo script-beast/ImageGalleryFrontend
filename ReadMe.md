@@ -1,1 +1,1 @@
-Deployed: https://myimggallery.herokuapp.com/
+Deployed: https://addimage.netlify.app/
